@@ -1,30 +1,26 @@
-# use-dynamic-form
+## Available Scripts
 
-> Made with create-react-library
+In the project directory, you can run:
 
-[![NPM](https://img.shields.io/npm/v/use-dynamic-form.svg)](https://www.npmjs.com/package/use-dynamic-form) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+### `npm start`
 
-## Install
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-```bash
-npm install --save use-dynamic-form
-```
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-## Usage
+### `npm test`
 
-```tsx
-import React, { Component } from 'react'
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-import MyComponent from 'use-dynamic-form'
-import 'use-dynamic-form/dist/index.css'
+### `npm run build`
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
-```
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## License
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-MIT © [](https://github.com/)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
