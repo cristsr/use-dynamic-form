@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import { createValidators, getCurrentError } from './functions'
 import Switch from './Switch'
 import { ComponentProps, DynamicFormConfig, FormComponentConfig } from './types'
-import { UseFormOptions } from 'react-hook-form/dist/types'
+import { UseFormOptions } from 'react-hook-form'
 
 const useDynamicForm = ({ config, mode, defaultValues }: DynamicFormConfig) => {
   const formConfig: UseFormOptions = {
