@@ -15,13 +15,12 @@ export const useDynamicForm = ({ config, mode, defaultValues }: DynamicFormConfi
   const { errors } = methods
 
   const inputs = config.map(
-    ({ type, ...value }: FormComponentConfig, index: number) => {
+    (value: FormComponentConfig, index: number) => {
       const validators = createValidators(value, methods)
       const error = getCurrentError(value, errors)
 
       const props: ComponentProps = {
         ...value,
-        type,
         methods,
         validators,
         error

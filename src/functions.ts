@@ -1,22 +1,25 @@
-import { FormComponentConfig } from './types'
+import { FormComponentConfig, ValidatorFn, Validators } from './types'
 import { FieldError, FieldErrors, UseFormMethods } from 'react-hook-form'
 
 export const createValidators = (
   conf: FormComponentConfig,
   methods: UseFormMethods
-) => {
+): Validators => {
+
   if (!conf.validators) {
-    return {}
+    return null
   }
 
   if (!conf.validators.validate) {
     return conf.validators
   }
 
-  const validate = Object.keys(conf.validators.validate)
+  const validations = conf.validators.validate;
+
+  const validate = Object.keys(validations)
     .map((key) => ({
       key,
-      fn: conf.validators.validate[key](methods)
+      fn: validations[key](methods) as ValidatorFn
     }))
     .reduce(
       (acc, curr) => ({
