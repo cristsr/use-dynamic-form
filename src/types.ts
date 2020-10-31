@@ -49,3 +49,8 @@ export type DynamicFormConfig = {
   mode: keyof ValidationMode
   defaultValues?: DefaultValues
 }
+
+export type DynamicForm = {
+  form: ReactNode,
+  methods: UseFormMethods
+}

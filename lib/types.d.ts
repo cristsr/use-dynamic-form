@@ -42,4 +42,8 @@ export declare type DynamicFormConfig = {
     mode: keyof ValidationMode;
     defaultValues?: DefaultValues;
 };
+export declare type DynamicForm = {
+    form: ReactNode;
+    methods: UseFormMethods;
+};
 //# sourceMappingURL=types.d.ts.map

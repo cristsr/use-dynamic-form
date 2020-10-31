@@ -2,10 +2,10 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import { createValidators, getCurrentError } from './functions'
 import Switch from './Switch'
-import { ComponentProps, DynamicFormConfig, FormComponentConfig } from './types'
+import { ComponentProps, DynamicForm, DynamicFormConfig, FormComponentConfig } from './types'
 import { UseFormOptions }  from 'react-hook-form'
 
-export const useDynamicForm = ({ config, mode, defaultValues }: DynamicFormConfig) => {
+export const useDynamicForm = ({ config, mode, defaultValues }: DynamicFormConfig): DynamicForm => {
   const formConfig: UseFormOptions = {
     mode: mode || 'onChange',
     defaultValues: defaultValues || {}
