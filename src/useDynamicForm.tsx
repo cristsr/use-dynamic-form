@@ -14,7 +14,7 @@ export const useDynamicForm = ({ config, mode, defaultValues }: DynamicFormConfi
   const methods = useForm(formConfig)
   const { errors } = methods
 
-  const inputs = config.map(
+  const form = config.map(
     (value: FormComponentConfig, index: number) => {
       const validators = createValidators(value, methods)
       const error = getCurrentError(value, errors)
@@ -29,8 +29,6 @@ export const useDynamicForm = ({ config, mode, defaultValues }: DynamicFormConfi
       return <Switch key={index} {...props} />
     }
   )
-
-  const form = <form>{inputs}</form>
 
   return {
     form,
