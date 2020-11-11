@@ -1,6 +1,6 @@
 {
   "name": "use-dynamic-form",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Libreria para crear formularios dinamicos en react",
   "main": "lib/index.js",
   "types": "lib",
